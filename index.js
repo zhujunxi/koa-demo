@@ -28,4 +28,6 @@ userRouter.get("/:id", ctx => {
 });
 app.use(router.routes());
 app.use(userRouter.routes());
+
+app.use(userRouter.allowedMethods());
 app.listen(3000);
